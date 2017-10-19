@@ -14,21 +14,16 @@ module.exports = {
     filename: 'index_bundle.js'
   },
   module: {
-    rules: [
-      {
-        test: /\.(png|jpg|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {}
-          }
-        ]
-      }
-    ],
     loaders: [
+      { test: /\.(PNG|png|jpg|gif)$/, loader: 'file-loader'},
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
     ]
   },
+  /*
+  resolve: {
+    extensions: [ '*', '.js', '.jsx','.png' ]
+  },
+  */
   plugins: [HtmlWebpackPluginConfig]
 }

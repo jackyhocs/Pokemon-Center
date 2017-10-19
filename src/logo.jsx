@@ -1,7 +1,6 @@
 import React from 'react';
 import { bounce } from 'react-animations';
-import Radium from 'radium';
-import imgSrc from './pokemon/Pokeball.PNG';
+import Radium , {StyleRoot} from 'radium';
 
 const styles = {
   bounce: {
@@ -13,7 +12,7 @@ const styles = {
 export default class Logo extends React.Component{
   render() {
     return (
-      <img src={imgSrc} style={styles.bounce}/>
+      <StyleRoot><img src={require('../pokemon/Pokeball.PNG')} style={styles.bounce}/></StyleRoot>
     );
   }
 }
