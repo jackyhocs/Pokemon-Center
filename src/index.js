@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.jsx';
-import Logo from './logo.jsx';
+import Logo from './js/logo.jsx';
+import Pokemon from './js/pokemonSprite.jsx'
 
-ReactDOM.render(
+/*ReactDOM.render(
  <App />,
  document.getElementById('root')
- );
- 
+ );*/
+
 ReactDOM.render(
   <Logo />,
   document.getElementById('logo')
+);
+ReactDOM.render(
+  <Pokemon />,
+  document.getElementById('pokemonSprite')
 );
