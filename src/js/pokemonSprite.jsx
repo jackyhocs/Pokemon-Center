@@ -1,15 +1,16 @@
 import React from 'react';
+import spriteStyles from '../css/sprite.css'
 
-class pokemonSprite extends React.Component {
+class PokemonSprite extends React.Component {
   getRandom() {
     return Math.trunc(Math.random() * (84 - 1) + 1);
   }
   render(){
-    console.log(this.getRandom());
+    const path = require('../../pokemon/sprite (' + this.getRandom() + ').png');
     return (
-      <h1> hellow </h1>
+      <img src={path} className={spriteStyles.sprite}/>
     );
   }
 }
 
-export default pokemonSprite;
+export default PokemonSprite;
