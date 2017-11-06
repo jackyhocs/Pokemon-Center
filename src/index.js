@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Logo from './js/logo.jsx';
+import Root from './js/Root.jsx'
+/*import Logo from './js/logo.jsx';
 import Sprite from './js/pokemonSprite.jsx'
-import Background from './js/background.jsx'
+import { CookiesProvider } from 'react-cookie';*/
 
 /*ReactDOM.render(
  <App />,
@@ -21,5 +22,8 @@ import Background from './js/background.jsx'
 ReactDOM.render(
   <Sprite />,
   document.getElementById('sprite')
+);*/
+ReactDOM.render(
+  <Root />,
+  document.getElementById('root')
 );
-*/

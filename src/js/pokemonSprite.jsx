@@ -1,14 +1,30 @@
 import React from 'react';
-import spriteStyles from '../css/sprite.css'
+import Cookies from 'universal-cookie';
+import SortedArray from 'collections/sorted-array';
+import '../css/sprite.css';
 
 class PokemonSprite extends React.Component {
+  insertPokemon(pokemonNum){
+    const cookie = new Cookies();
+    let jsonStr = cookie.get('pokemon');
+    console.log(jsonStr.acquired);
+    let sorted = new SortedArray(jsonStr.acquired);
+    sorted.add(pokemonNum);
+    let json = { "acquired": sorted.toArray()}
+    cookie.set('pokemon', json, {path: '/'});
+  }
   getRandom() {
     return Math.trunc(Math.random() * (84 - 1) + 1);
   }
   render(){
-    const path = require('../../pokemon/sprite (' + this.getRandom() + ').png');
+    let pokemonNum = this.getRandom();
+    this.insertPokemon(pokemonNum);
+    const path = require('../../pokemon/sprite (' + pokemonNum + ').png');
+
     return (
-      <img src={path} className={spriteStyles.sprite}/>
+      <div className="pokemonSprite">
+        <img src={path} className="pokemonSprite-pokemon"/>
+      </div>
     );
   }
 }

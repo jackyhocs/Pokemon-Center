@@ -1101,6 +1101,12 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
+collections@^5.0.7:
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/collections/-/collections-5.0.7.tgz#347e78bfe99d3e5a3864b6dfdc7bce4e401cbe54"
+  dependencies:
+    weak-map "~1.0.x"
+
 color-convert@^1.3.0, color-convert@^1.9.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.0.tgz#1accf97dd739b983bf994d56fec8f95853641b7a"
@@ -1207,7 +1213,7 @@ cookie-signature@1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/cookie-signature/-/cookie-signature-1.0.6.tgz#e303a882b342cc3ee8ca513a79999734dab3ae2c"
 
-cookie@0.3.1:
+cookie@0.3.1, cookie@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
 
@@ -2139,6 +2145,10 @@ hmac-drbg@^1.0.0:
 hoek@2.x.x:
   version "2.16.3"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
+
+hoist-non-react-statics@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz#aa448cf0986d55cc40773b17174b7dd066cb7cfb"
 
 home-or-tmp@^2.0.0:
   version "2.0.0"
@@ -3512,7 +3522,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0:
+prop-types@^15.0.0, prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
   dependencies:
@@ -3642,6 +3652,14 @@ react-background-image-loader@^0.0.5:
   dependencies:
     prop-types "^15.5.10"
     react "^15.5.4"
+
+react-cookie@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/react-cookie/-/react-cookie-2.1.1.tgz#3fd55cdcfe72350858b46e2709dba1dd60475e10"
+  dependencies:
+    hoist-non-react-statics "^1.2.0"
+    prop-types "^15.0.0"
+    universal-cookie "^2.1.0"
 
 react-dom@^16.0.0:
   version "16.0.0"
@@ -4372,6 +4390,13 @@ uniqs@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/uniqs/-/uniqs-2.0.0.tgz#ffede4b36b25290696e6e165d4a59edb998e6b02"
 
+universal-cookie@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/universal-cookie/-/universal-cookie-2.1.0.tgz#2e9aa6b4eb992e34161693c943ba42b1931f6976"
+  dependencies:
+    cookie "^0.3.1"
+    object-assign "^4.1.0"
+
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
@@ -4473,6 +4498,10 @@ wbuf@^1.1.0, wbuf@^1.7.2:
   resolved "https://registry.yarnpkg.com/wbuf/-/wbuf-1.7.2.tgz#d697b99f1f59512df2751be42769c1580b5801fe"
   dependencies:
     minimalistic-assert "^1.0.0"
+
+weak-map@~1.0.x:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/weak-map/-/weak-map-1.0.5.tgz#79691584d98607f5070bd3b70a40e6bb22e401eb"
 
 webpack-dev-middleware@^1.11.0:
   version "1.12.0"
