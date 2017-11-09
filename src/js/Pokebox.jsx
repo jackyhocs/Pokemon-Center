@@ -1,28 +1,27 @@
 import React from 'react';
 import ReactList from 'react-list';
+import Cookies from 'universal-cookie';
+import { Scrollbars } from 'react-custom-scrollbars';
+import '../css/Pokebox.css';
+
+const cookies = new Cookies();
 
 const renderSquareItem = (index, key) =>
-  <div key={key} className={'square-item' + (index % 2 ? '' : ' even')}>
-    <img src={require(`../../pokemon/sprite (${index+1}).png`)}/>
-  </div>;
+<div key={key} className={'square-item'}>
+  <img item={index}src={cookies.get('pokemon').acquired.includes(index) ? require(`../../pokemon/sprite (${index}).png`) : require('../../pokemon/Question.png')}
+  height={100} width={100}/>
+</div>;
 
 class Pokebox extends React.Component {
-  renderSquare(num){
-    return (
-      <div className="Image">
-        <img src={require('../../pokemon/Question.png')} />
-      </div>
-    );
-  }
   render(){
     return (
-      <div style={{overflow: 'auto', maxHeight: 400}}>
+      <Scrollbars style={{width:400, height: 300 }}>
         <ReactList
           itemRenderer={renderSquareItem}
           length={84}
           type='uniform'
         />
-      </div>
+      </Scrollbars>
     );
   }
 }

@@ -1,23 +1,15 @@
 import React from 'react';
 import bgPic from '../../backgrounds/1.png'
-import BackgroundImage from 'react-background-image-loader';
+import '../css/Background.css';
 
-var sectionStyle = {
-  width: '100%',
-  height: '1000px',
-    backgroundImage: `url(${bgPic}) no-repeat center center`,
-    overflow: 'hidden',
-    backgroundSize: 'cover',
-};
 
 class Background extends React.Component {
   render() {
     return (
-          <BackgroundImage src={bgPic} placeholder={bgPic} style={sectionStyle}></BackgroundImage>
+      <div className="background">
+        <img src={bgPic} placeholder={bgPic} height="100%" width="100%"/>
+      </div>
     );
-      /*return(
-         <div style={sectionStyle}></div>
-      );*/
   }
 }
 

@@ -1,4 +1,5 @@
 .Logo {
   position: absolute;
   left: 45%;
+  display: flex;
 }

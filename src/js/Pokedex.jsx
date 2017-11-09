@@ -30,7 +30,6 @@ class Pokedex extends React.Component {
   () => {
     this.setState({animation});
   });
-    //const { animation } = this.state;
   }
   render() {
     let pokeboxTemp = null;
@@ -38,12 +37,10 @@ class Pokedex extends React.Component {
       pokeboxTemp = <Pokebox />;
     }
     return(
-      <StyleRoot>
         <div className="Pokedex">
           {pokeboxTemp}
-          <img src={require('../../pokemon/Pokedex.png')} width={100} height={100} style={styles.bounce} onClick={this.handleClick}/>
+          <img src={require('../../pokemon/Pokedex.png')} width={100} height={100}  onClick={this.handleClick}/>
         </div>
-      </StyleRoot>
     );
   }
 }
