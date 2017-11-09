@@ -1,9 +1,0 @@
-.pokemonSprite {
-  position: absolute;
-  left: 45%;
-  top: 40%;
-  display: flex;
-  justify-content: center;
-  margin-top: -50px;
-  margin-left: -50px;
-}
